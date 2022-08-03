@@ -3,7 +3,7 @@ package automacao.paginas;
 import automacao.core.Core;
 import org.openqa.selenium.By;
 
-public class Home extends Core {
+public class  Home extends Core {
 
     public String getUrl() {
         return "http://www.automationpractice.com";
