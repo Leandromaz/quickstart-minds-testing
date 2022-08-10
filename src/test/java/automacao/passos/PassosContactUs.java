@@ -43,6 +43,12 @@ public class PassosContactUs extends Core {
         digitarCampo(paginacontactus.getOrderReference(), orderReference);
     }
 
+    @Given("Anexa um arquivo no campo de file")
+    public void anexa_um_arquivo_no_campo_de_file() {
+        anexarArquivo(paginacontactus.getChooseFile(),"C:\\curriculum.pdf");
+
+    }
+
     @Given("^Digitar \"([^\"]*)\" no campo message$")
     public void digitar_no_campo_message(String message) {
         digitarCampo(paginacontactus.getMessage(), message);

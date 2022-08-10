@@ -7,6 +7,7 @@ Feature: Preenche e manda o formulario de contato
     And Seleciona a opcão Custumer Service
     And Digitar o "<email>" no campo email address
     And Digitar "<orderReference>" no campo order reference
+    And Anexa um arquivo no campo de file
     And Digitar "<message>" no campo message
     When Clico no botão send
     Then Deverá mostrar a "<mensagemDeSucesso>"

@@ -240,4 +240,8 @@ public class Core {
         Select selectContactUs = new Select(selectElement);
         selectContactUs.selectByIndex(index);
     }
+    public void anexarArquivo(By by, String arquivo) {
+        driver.findElement(by).sendKeys(arquivo);
+
+    }
 }
