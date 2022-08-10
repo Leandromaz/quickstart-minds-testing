@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileInputStream;
@@ -222,5 +223,21 @@ public class Core {
 
     public static WebDriver getDriver() {
         return driver;
+    }
+
+    public void irParaOFrame(int index) {
+        driver.switchTo().frame(index);
+    }
+
+    public void validarCampoGetTextComFrame(By by, String esperado,int index) {
+        irParaOFrame(index);
+        validarCampoGetText(by, esperado);
+    }
+
+    public void selecionaCampoSelect(By by, String name,int index) {
+        clicar(by);
+        WebElement selectElement = driver.findElement(By.name(name));
+        Select selectContactUs = new Select(selectElement);
+        selectContactUs.selectByIndex(index);
     }
 }

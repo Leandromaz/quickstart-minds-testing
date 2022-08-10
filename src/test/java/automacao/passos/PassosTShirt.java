@@ -30,7 +30,7 @@ public class PassosTShirt extends Core {
     }
     @Then("a modal contendo o produto descrito deveria aparecer")
     public void a_modal_contendo_o_produto_descrito_deveria_aparecer() {
-        validarCampoGetText(paginatshirt.getBotaoAddCarrinho(),"Add to cart");
+        validarCampoGetTextComFrame(paginatshirt.getBotaoAddCarrinho(),"Add to cart", 0 );
     }
 
 

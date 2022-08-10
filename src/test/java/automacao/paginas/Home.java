@@ -10,10 +10,12 @@ public class  Home extends Core {
     }
 
     public By getCampoBarraPesquisa() {
+
         return getById("search_query_top");
     }
 
     public By getBotaoBuscar() {
+
         return getByCss("button[type='submit']");
     }
 }
