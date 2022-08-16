@@ -29,7 +29,7 @@ public class PassosContactUs extends Core {
 
     @Given("Seleciona a opcão Custumer Service")
     public void seleciona_a_opcao_custumer_service() {
-        selecionaCampoSelect(paginacontactus.getSelectContact(),"id_contact", 1);
+        selecionaCampoSelectPorIndex(paginacontactus.getSelectContact(),"id_contact", 1);
     }
 
     @Given("^Digitar o \"([^\"]*)\" no campo email address$")

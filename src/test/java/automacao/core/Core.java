@@ -234,11 +234,17 @@ public class Core {
         validarCampoGetText(by, esperado);
     }
 
-    public void selecionaCampoSelect(By by, String name,int index) {
+    public void selecionaCampoSelectPorIndex(By by, String name,int index) {
         clicar(by);
         WebElement selectElement = driver.findElement(By.name(name));
         Select selectContactUs = new Select(selectElement);
         selectContactUs.selectByIndex(index);
+    }
+    public void selecionaCampoSelectPorValue(By by, String name,String value) {
+        clicar(by);
+        WebElement selectElement = driver.findElement(By.name(name));
+        Select selectContactUs = new Select(selectElement);
+        selectContactUs.selectByValue(value);
     }
     public void anexarArquivo(By by, String arquivo) {
         driver.findElement(by).sendKeys(arquivo);
