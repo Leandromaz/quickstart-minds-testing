@@ -75,5 +75,10 @@ public class CreateAnAccount extends Core {
         return getById("company");
 
     }
+    public By getAddressone() {
+
+        return getById("address1");
+
+    }
 
 }

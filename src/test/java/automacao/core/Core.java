@@ -46,7 +46,6 @@ public class Core {
                 capabilities.setJavascriptEnabled(true);
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-                capabilities.setCapability(ChromeOptions.CAPABILITY, options);
                 if (System.getProperty("os.name").contains("Win")) {
                     System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
                 } else if (System.getProperty("os.name").contains("Mac")) {
@@ -54,7 +53,7 @@ public class Core {
                 } else {
                     System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
                 }
-                driver = new ChromeDriver(capabilities);
+                driver = new ChromeDriver(options);
             }
         }
         driver.manage().window().maximize();

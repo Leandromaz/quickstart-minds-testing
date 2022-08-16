@@ -69,7 +69,7 @@ public class PassosCreateAnAccount extends Core {
 
     }
 
-   @Given("^limpa e digita o {string} no campo first name$")
+   @Given("^limpa e digita o \"([^\"]*)\" no campo first name$")
    public void limpa_e_digita_o_no_campo_first_name(String firstName) {
        limparCampo(paginacreateanaccount.getPrimeiroNome());
        digitarCampo(paginacreateanaccount.getCampoPrimeiroNome(), firstName);
@@ -80,58 +80,58 @@ public class PassosCreateAnAccount extends Core {
         digitarCampo(paginacreateanaccount.getUltimoNome(), lastName);
 
     }
-    @Given("Digita o nome da \"([^\"]*)\" no campo company")
+    @Given("^Digita o nome da \"([^\"]*)\" no campo company$")
     public void digita_o_nome_da_companhia_no_campo_company(String companhia) {
         digitarCampo(paginacreateanaccount.getCompany(), companhia);
 
     }
-    @Given("Digita o \"([^\"]*)\" no campo address")
-    public void digita_o_no_campo_address(String string) {
+    @Given("^Digita o \"([^\"]*)\" no campo address$")
+    public void digita_o_no_campo_address(String address) {
 
     }
-    @Given("Digita o \"([^\"]*)\" no campo address line two")
+    @Given("^Digita o \"([^\"]*)\" no campo address line two$")
     public void digita_o_no_campo_address_line_two(String string) {
 
     }
-    @Given("Digita a \"([^\"]*)\" no campo city")
+    @Given("^Digita a \"([^\"]*)\" no campo city$")
     public void digita_a_no_campo_city(String string) {
 
     }
-    @Given("Seleciona o estado no campo state")
+    @Given("^Seleciona o estado no campo state$")
     public void seleciona_o_estado_no_campo_state() {
 
     }
-    @Given("Digita o \"([^\"]*)\" no campo zip code")
+    @Given("^Digita o \"([^\"]*)\" no campo zip code$")
     public void digita_o_no_campo_zip_code(String string) {
 
     }
-    @Given("Selecione o pais")
+    @Given("^Selecione o pais$")
     public void selecione_o_pais() {
 
     }
-    @Given("Digita a informação adicional testing no campo information addicional")
-    public void digita_a_informacao_adicional_no_campo(String string) {
+    @Given("^Digita a informação adicional testing no campo information addicional$")
+    public void digita_a_informacao_adicional_no_campo() {
+
 
     }
-    @Given("Digita o \"([^\"]*)\" no campo phone home")
+    @Given("^Digita o \"([^\"]*)\" no campo phone home$")
     public void digita_o_no_campo_phone_home(String string) {
 
     }
-    @Given("Digita o \"([^\"]*)\" no campo mobile phone")
+    @Given("^Digita o \"([^\"]*)\" no campo mobile phone$")
     public void digita_o_no_campo_mobile_phone(String string) {
 
     }
-    @Given("Limpe o campo e digite o \"([^\"]*)\" no campo Assign an address alias for future reference")
+    @Given("^Limpe o campo e digite o \"([^\"]*)\" no campo Assign an address alias for future reference$")
     public void limpe_o_campo_e_digite_o_email(String string) {
 
     }
-    @When("Clico no botão Register")
+    @When("^Clico no botão Register$")
     public void clico_no_botao_register() {
 
     }
-    @Then("mostre a mensagem de boas vindas \"([^\"]*)\"")
+    @Then("^mostre a mensagem de boas vindas \"([^\"]*)\"$")
     public void valida_a_mensagem_de_boas_vindas(String string) {
-
 
 
     }
