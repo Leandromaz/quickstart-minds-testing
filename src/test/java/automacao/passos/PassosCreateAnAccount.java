@@ -86,53 +86,58 @@ public class PassosCreateAnAccount extends Core {
 
     }
     @Given("^Digita o \"([^\"]*)\" no campo address$")
-    public void digita_o_no_campo_address(String address) {
-
+    public void digita_o_no_campo_address(String endereco) {
+        digitarCampo(paginacreateanaccount.getAddressone(), endereco);
     }
     @Given("^Digita o \"([^\"]*)\" no campo address line two$")
-    public void digita_o_no_campo_address_line_two(String string) {
-
+    public void digita_o_no_campo_address_line_two(String complemento) {
+         digitarCampo(paginacreateanaccount.getComplemento(), complemento);
     }
     @Given("^Digita a \"([^\"]*)\" no campo city$")
-    public void digita_a_no_campo_city(String string) {
+    public void digita_a_no_campo_city(String cidade) {
+        digitarCampo(paginacreateanaccount.getCidade(), cidade);
 
     }
     @Given("^Seleciona o estado no campo state$")
     public void seleciona_o_estado_no_campo_state() {
+        selecionaCampoSelectPorValue(paginacreateanaccount.getState(),"id_state","9");
 
     }
     @Given("^Digita o \"([^\"]*)\" no campo zip code$")
-    public void digita_o_no_campo_zip_code(String string) {
+    public void digita_o_no_campo_zip_code(String cep) {
+        digitarCampo(paginacreateanaccount.getZipCode(), cep);
 
     }
     @Given("^Selecione o pais$")
     public void selecione_o_pais() {
+        selecionaCampoSelectPorValue(paginacreateanaccount.getPais(),"id_country","21");
 
     }
     @Given("^Digita a informação adicional testing no campo information addicional$")
     public void digita_a_informacao_adicional_no_campo() {
-
+      digitarCampo(paginacreateanaccount.getInformacaoAdicional(),"teste");
 
     }
     @Given("^Digita o \"([^\"]*)\" no campo phone home$")
-    public void digita_o_no_campo_phone_home(String string) {
-
+    public void digita_o_no_campo_phone_home(String telefoneResidencial) {
+        digitarCampo(paginacreateanaccount.getHomePhone(),telefoneResidencial);
     }
     @Given("^Digita o \"([^\"]*)\" no campo mobile phone$")
-    public void digita_o_no_campo_mobile_phone(String string) {
-
+    public void digita_o_no_campo_mobile_phone(String telefoneCelular) {
+        digitarCampo(paginacreateanaccount.getPhoneMobile(),telefoneCelular);
     }
     @Given("^Limpe o campo e digite o \"([^\"]*)\" no campo Assign an address alias for future reference$")
-    public void limpe_o_campo_e_digite_o_email(String string) {
-
+    public void limpe_o_campo_e_digite_o_email(String endereco) {
+        limparCampo(paginacreateanaccount.getMyAdress());
+        digitarCampo(paginacreateanaccount.getMyAdress(), endereco);
     }
     @When("^Clico no botão Register$")
     public void clico_no_botao_register() {
-
+       clicar(paginacreateanaccount.getButtonRegister());
     }
     @Then("^mostre a mensagem de boas vindas \"([^\"]*)\"$")
-    public void valida_a_mensagem_de_boas_vindas(String string) {
-
+    public void valida_a_mensagem_de_boas_vindas(String mensagemDeBoasVindas ) {
+ validarCampoGetText(paginacreateanaccount.getMessage(), mensagemDeBoasVindas);
 
     }
 

@@ -34,5 +34,6 @@ Feature: Cria uma conta nova
 
 
     Examples:
-      | email                    | firstName | lastName | password        | companhia | endereco               | complemento | cidade | cep   | mensagemDeBoasVindas                                                                      |
-      | leandromaz1988@gmail.com | Leandro   | Souza    | a7x44.mjLVpVhSf | teste S.A | Av Rua duque de caxias | Edificio    | içara  | 32808 | Welcome to your account. Here you can manage all of your personal information and orders. |
+      | email            | firstName | lastName | password        | companhia | endereco               | complemento | cidade   | cep   | telefoneResidencial | telefoneCelular | mensagemDeBoasVindas                                                                      |
+      | teste@gmail.com  | Leandro   | Souza    | a7x44.mjLVpVhSf | teste S.A | Av Rua duque de caxias | Edificio    | içara    | 32808 | 04836240071         | 048999670558    | Welcome to your account. Here you can manage all of your personal information and orders. |
+      | teste2@gmail.com | Henrique  | Luiz     | a8x45.mjPUpVhSf | teste B.A | Rua via mão            | Edificio    | Criciuma | 32808 | 04834334071         | 048999670558    | Welcome to your account. Here you can manage all of your personal information and orders. |

@@ -245,6 +245,7 @@ public class Core {
         Select selectContactUs = new Select(selectElement);
         selectContactUs.selectByValue(value);
     }
+
     public void anexarArquivo(By by, String arquivo) {
         driver.findElement(by).sendKeys(arquivo);
 
